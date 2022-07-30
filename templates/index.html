@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Prediction App | Rakesh Sahni</title>
+    <link rel="stylesheet" href="./../static/index.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="header">
+            <h1>Emotion Prediction App</h1>
+        </div>
+        <div class="left-right">
+            <div class="left">
+                <h2>Naive Bayes Algorithms | Machine Learning</h2>
+                <form action="/" method="post">
+                    <textarea name="ml_message" rows="7" required placeholder="Write Message"></textarea>
+                    <button type="submit">Predict</button>
+                </form>
+            </div>
+            <div class="right">
+                <h2>LSTM - Recurrent Neural Network | Deep Learning</h2>
+                <form action="/deep-learning" method="post">
+                    <textarea name="dl_message" rows="7" required placeholder="Write Message"></textarea>
+                    <button type="submit">Predict</button>
+                </form>
+            </div>
+        </div>
+        <!-- <h1>Hii</h1> -->
+        {% if data %}
+        <div class="below">
+            <div class="message">
+                <h2>{{model_type}}</h2>
+                <h2>Text : {{data}}</h2>
+            </div>
+            <div class="pred">
+                <!-- <h2>❤️Prediction {{emotion_type}} -> {{pred}}</h2> -->
+                {% for itm in pred %}
+                <h2>{{emoji_map[emotion_type[itm[0]]]}} {{emotion_type[itm[0]]}} : {{itm[1]}}%</h2>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </main>
+</body>
+
+</html>
