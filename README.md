@@ -23,7 +23,7 @@ Current website : https://sohipm.com
 ### surprise     572
 
 ### When I used machine learning then we just remove love and surprise categories due to less percentage data in whole corpus. I have also another method for over-sampling or under sampling or we can also use SMOT but I did'nt use here.
-### Accuracy with about 75-80%
+### Accuracy with about 80-85%
 
 ### when I use LSTM recurent neural network in that situation. I did'nt remove lesser categories because
 ### I have use advance pretrained glove word embedding. ( stanford university )
